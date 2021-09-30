@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+{{block.super}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <a href="{% url 'health'%}">
+                <div class="panel panel-default">
+                    <div class="panel heading" style="height:50px;">2
+
+                        <p style="font-family: cursive; text-align: center; font-size: 50px;">Health</p>
+                    </div>
+                    <div class="panel-body" style="height:300px;">
+                        <div class="card" style="width: 22.5rem;height:15rem;">
+                            <img class="card-img-top dark"
+                                src="https://images.pexels.com/photos/5998504/pexels-photo-5998504.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                style="width:330px;height:250px;">
+                        </div>
+
+                    </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'businesses'%}">
+            <div class="panel panel-default">
+                <div class="panel heading" style="height:50px;">
+                    <p style="font-family: cursive; text-align: center; font-size: 50px;">Businesses</p>
+                </div>
+                <div class="panel-body" style="height:300px;">
+                    
+                        <img class="card-img-top dark"
+                            src="https://images.pexels.com/photos/7172858/pexels-photo-7172858.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            style="width:330px;height:250px;">
+                    </div>
+                
+        </a>
+
+    </div>
+</div>
+<div class="col-md-4">
+    <a href="{% url 'authorities'%}">
+        <div class="panel panel-default">
+            <div class="panel heading" style="height:50px;">
+                <p style="font-family: cursive; text-align: center; font-size: 50px;">Security</p>
+            </div>
+            <div class="panel-body" style="height:300px;">
+                <img class="card-img-top dark"
+                    src="https://images.pexels.com/photos/33598/cop-policewoman-colleagues-funny.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    style="width:330px;height:250px;">
+            </div>
+        </div>
+    </a>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
