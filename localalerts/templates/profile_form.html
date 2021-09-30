@@ -1,0 +1,54 @@
+{% extends "registration/base.html" %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background-image: url('https://images.unsplash.com/photo-1596005554384-d293674c91d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1498&q=80')
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <!-- Empty div -->
+
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 form-section">
+      {{form.media}}
+
+      {% if form.errors %}
+      <p>Please enter correct value</p>
+      {% endif %}
+
+      <div class="panel panel-default" style="margin-top:100px;">
+
+        <div class="panel-body">
+
+          <div class="text-center">
+            <h3>Create your profile</h3>
+            <form action="{% url 'create-profile' %}" method="post" enctype="multipart/form-data">
+
+              {% csrf_token%}
+              {% bootstrap_form form %}
+
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary login-button" value="Create">
+
+              </div>
+              <input type="hidden" name="next" value="/">
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- Empty div -->
+    <div class="col-md-4"></div>
+  </div>
+
+</div>
+
+{% endblock %}
