@@ -1,0 +1,42 @@
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title> Neighbourhood {{title}}</title>
+    {% else %}
+    <title>Neighbourhood</title>
+    {% endif %}
+
+    {% block styles %}
+    {% bootstrap_css %}
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Great+Vibes&display=swap" rel="stylesheet">
+    {% endblock %}
+</head>
+<style>
+body{
+    background-image: url('https://images.unsplash.com/photo-1596005554384-d293674c91d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1498&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+<body>
+    {% include "navbar.html" %}
+    <p style="padding-top:0px;padding-bottom: 30px;"></p>
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block scripts %}
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+
+</html>
